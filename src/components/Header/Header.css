@@ -1,0 +1,42 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    height: 6.5rem;
+    width: 6.5rem;
+}
+.header-menu{
+    list-style: none;
+    gap: 2rem;
+    color: white;
+    margin-right: 7rem;
+    display: flex;
+}
+
+.header-menu li{
+    cursor: pointer;
+}
+.header-menu li:hover{
+    color:orange;
+    cursor: pointer;
+}
+@media screen and (max-width: 768px){
+    .header>:nth-child(2){
+        position: fixed;
+        right: 2rem;
+        margin-top: 1.4rem;
+        margin-right: 2rem;
+        z-index: 99;
+    }
+    .header-menu{
+        flex-direction: column;
+        
+        padding: 1.5rem;
+        background-color: var(--appColor);
+    }
+    .logo{
+        height: 5rem;
+        width: 5rem;
+    }
+}

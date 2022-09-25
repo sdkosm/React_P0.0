@@ -1,0 +1,23 @@
+.footer-container{
+   position: relative;
+}
+.footer-container>hr{
+    border: 2px solid rgb(240, 210, 153);
+    
+}
+.footer{
+    padding: 0.5rem 2rem;
+   gap: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    /* display: inline; */
+}
+.footer>img{
+    width: 2rem;
+    height: 2rem;
+    
+    cursor: pointer;
+}

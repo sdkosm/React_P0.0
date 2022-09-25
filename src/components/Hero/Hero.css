@@ -1,0 +1,315 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+}
+.left-h {
+  padding: 1rem;
+  flex: 3;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+.right-h {
+  flex: 1;
+  position: relative;
+  background-color: orange;
+}
+.ads {
+  margin-top: 1.5rem;
+  background-color: grey;
+  border-radius: 4rem;
+  width: fit-content;
+  padding: 20px 13px;
+  text-transform: uppercase;
+  color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.ads span {
+  z-index: 2;
+}
+
+.ads div {
+  position: absolute;
+  background-color: orange;
+  width: 5rem;
+  height: 80%;
+  border-radius: 3rem;
+  left: 8px;
+  z-index: 1;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-transform: uppercase;
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: white;
+  text-overflow: inherit;
+}
+
+.quote {
+  font-size: 1rem;
+  font-weight: 200;
+  text-transform: none;
+  letter-spacing: 1px;
+  width: 80%;
+  color: aliceblue;
+}
+
+.figures {
+  display: flex;
+  gap: 2rem;
+}
+
+.figures div {
+  display: flex;
+  flex-direction: column;
+}
+
+.figures div span:nth-of-type(1) {
+  font-size: 2rem;
+  color: white;
+}
+.figures div span:nth-of-type(2) {
+  text-transform: uppercase;
+  color: grey;
+}
+
+.hero-buttons > :nth-child(1) {
+  background-color: orange;
+  color: white;
+  width: 8rem;
+}
+.hero-buttons > :nth-child(2) {
+  background-color: transparent;
+  color: white;
+  width: 8rem;
+  border: 2px solid orange;
+}
+.join-btn {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  color: black;
+}
+.heart-rate {
+  display: flex;
+  gap: 1rem;
+  background-color: grey;
+  flex-direction: column;
+  width: fit-content;
+  padding: 1rem;
+  align-items: flex-start;
+  border-radius: 5px;
+  position: absolute;
+  top: 6rem;
+  right: 2rem;
+}
+.heart-rate > :nth-child(2) {
+  color: rgb(255, 255, 255);
+}
+.heart-rate > :nth-child(3) {
+  color: white;
+  font-size: 1.5rem;
+}
+@keyframes animateHeart {
+  0% {
+    transform: rotate(45deg) scale(0.8);
+  }
+  5% {
+    transform: rotate(45deg) scale(0.9);
+  }
+  10% {
+    transform: rotate(45deg) scale(0.8);
+  }
+  15% {
+    transform: rotate(45deg) scale(1);
+  }
+  50% {
+    transform: rotate(45deg) scale(0.8);
+  }
+  100% {
+    transform: rotate(45deg) scale(0.8);
+  }
+}
+.heart-rate > img {
+  position: relative;
+  height: 35px;
+  width: 35px;
+  /* Animation */
+  transform: scale(1);
+  animation: pulse 2s linear infinite;
+}
+
+.heart-rate > img::after {
+  /* background:blue; */
+  background: inherit;
+  border-radius: 50%; /* To make circle */
+  content: "";
+  position: absolute;
+  /* top: -100px;*/
+  top: -50%; /* Inherit properties of parent */
+  /* left: -100px; */
+  left: 0;
+  height: 35px;
+  width: 35px;
+}
+.heart-rate > img::before {
+  /*  background:green; */
+  background: inherit;
+  border-radius: 50%; /* To make circle */
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -50%; /* Inherit properties of parent */
+  height: 35px;
+  width: 35px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  } /*
+   10% {
+       transform: rotate(-45deg) scale(1.3);
+   }
+   20% {
+       transform: rotate(-45deg) scale(0.9);
+   }
+   30% {
+       transform: rotate(-45deg) scale(1.2);
+   }
+   40% {
+       transform: rotate(-45deg) scale(0.9);
+   }*/
+  50% {
+    transform: scale(1.3);
+    opacity: 1;
+  } /*
+   60% {
+       transform: rotate(-45deg) scale(0.95);
+   }
+   70% {
+       transform: rotate(-45deg) scale(1);
+   } */
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.hero-image {
+  position: absolute;
+  top: 8rem;
+  right: 8.2rem;
+  width: 20rem;
+}
+.hero-back {
+  position: absolute;
+  top: 2rem;
+  right: 17rem;
+  width: 15rem;
+  z-index: -1;
+}
+.join-btn {
+  padding: 0.5rem;
+  top: 1.5rem;
+  width: 6rem;
+  right: 3rem;
+}
+.h-blur {
+  width: 20rem;
+
+  height: 20rem;
+  left: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .hero{
+    flex-direction: column;
+  }
+  .h-blur{
+
+    width: 14rem;
+  }
+  .ads{
+    align-self: center;
+    font-size: small;
+    margin-top: 0;
+    transform: scale(0.8);
+  }
+  .hero-text{
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+  }
+  .quote{
+    font-size: small;
+    font-weight: 200;
+    letter-spacing: 2px;
+    text-align: center;
+
+  }
+  .figures div span:nth-of-type(1) {
+    font-size: large;
+    color: white;
+  }
+  .figures div span:nth-of-type(2) {
+    font-size: small;
+  }
+  .hero-buttons{
+    display: flex;
+  }
+  
+  .hero-buttons > :nth-child(1) {
+ 
+   margin:1rem 1rem ;
+  }
+  .hero-buttons > :nth-child(2) {
+ margin:1rem 1rem;
+  }
+  .right-h{
+    position: relative;
+    background: none;
+  }
+  .heart-rate{
+    top: 2rem;
+    left: 0.6rem;
+    width: 4.5rem;
+    height: 7rem;
+  }
+  .heart-rate>img{
+    width: 1.8rem;
+    
+  }
+  .heart-rate > :nth-child(2) {
+    
+    font-size: small;
+  }
+  .heart-rate > :nth-child(3) {
+    color: white;
+    font-size: 1rem;
+  }
+  .hero-image{
+    position: relative;
+    width: 15rem;
+    top: 4rem;
+    left: 6rem;
+    align-self: center;
+  }
+  .hero-back{
+    width: 15rem;
+    top: 0;
+    left: 2rem;
+  }
+  .join-btn{
+    right: 1.5rem;
+    top: 2rem;
+  }
+  
+}
